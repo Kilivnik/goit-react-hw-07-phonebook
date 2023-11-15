@@ -11,7 +11,7 @@ export const getContactsOperation = createAsyncThunk(
   {
     condition: (_, { getState, extra }) => {
       const { contacts } = getState();
-      console.log(contacts);
+
       const { status } = contacts;
       if (status !== 'idle' && status !== 'success' && status !== 'error') {
         return false;
